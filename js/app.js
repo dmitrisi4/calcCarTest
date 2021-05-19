@@ -30812,10 +30812,10 @@
           jquery__WEBPACK_IMPORTED_MODULE_0___default.a
             .get(`https://api.privatbank.ua/p24api/exchange_rates?json&date=${todayStr}`)
             .done(function (response) {
-							let usdData = response.find(data => data.cc == 'USD');
-							let eurData = response.find(data => data.cc == 'EUR');
-              _this.exchangeRate.USD = usdData.rate;
-              _this.exchangeRate.EUR = eurData.rate;
+							let usdData = response.exchangeRate.find(data => data.currency == 'USD');
+							let eurData = response.exchangeRate.find(data => data.currency == 'EUR');
+              _this.exchangeRate.USD = usdData.purchaseRateNB;
+              _this.exchangeRate.EUR = eurData.purchaseRateNB;
               callback();
             })
             .fail(function () {
