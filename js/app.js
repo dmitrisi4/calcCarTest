@@ -30812,11 +30812,11 @@
           jquery__WEBPACK_IMPORTED_MODULE_0___default.a
             .ajax({
 							method: 'get',
-							url: `https://api.privatbank.ua/p24api/exchange_rates?json&date=${todayStr}`,
+							url: `https://cors-anywhere.herokuapp.com/https://api.privatbank.ua/p24api/exchange_rates?json&date=${todayStr}`,
 							crossDomain: true,
 							xhrFields: {
 								withCredentials: false
-							}
+							},
 						})
             .done(function (response) {
 							let usdData = response.exchangeRate.find(data => data.currency == 'USD');
