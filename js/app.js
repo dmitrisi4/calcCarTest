@@ -30811,10 +30811,14 @@
 					let todayStr = `${today.getDay()}.${today.getMonth() + 1}.${today.getFullYear()}`;
           jquery__WEBPACK_IMPORTED_MODULE_0___default.a
             .ajax({
+							method: 'get',
 							url: `https://api.privatbank.ua/p24api/exchange_rates?json&date=${todayStr}`,
 							crossDomain: true,
+							xhrFields: {
+								withCredentials: false
+							},
 							headers: {
-								'Content-Type': 'application/json',
+								'Content-Type': 'application/json'
 							}
 						})
             .done(function (response) {
