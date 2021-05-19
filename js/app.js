@@ -30812,11 +30812,7 @@
           jquery__WEBPACK_IMPORTED_MODULE_0___default.a
             .ajax({
 							url: `https://api.privatbank.ua/p24api/exchange_rates?json&date=${todayStr}`,
-							crossDomain: true,
-							headers: {
-								'Access-Control-Allow-Origin': '*',
-							}
-
+							crossDomain: true
 						})
             .done(function (response) {
 							let usdData = response.exchangeRate.find(data => data.currency == 'USD');
