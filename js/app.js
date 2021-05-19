@@ -30808,7 +30808,7 @@
         getExchangeRate: function getExchangeRate(callback) {
           var _this = this;
 					let today = new Date();
-					let todayStr = `${date.getDay()}.${date.getMonth() + 1}.${date.getFullYear()}`;
+					let todayStr = `${today.getDay()}.${today.getMonth() + 1}.${today.getFullYear()}`;
           jquery__WEBPACK_IMPORTED_MODULE_0___default.a
             .get(`https://api.privatbank.ua/p24api/exchange_rates?json&date=${todayStr}`)
             .done(function (response) {
