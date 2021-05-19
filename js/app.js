@@ -30814,7 +30814,7 @@
 							url: `https://api.privatbank.ua/p24api/exchange_rates?json&date=${todayStr}`,
 							crossDomain: true,
 							headers: {
-								'Content-Type': 'application/json'
+								'Content-Type': 'application/json',
 							}
 						})
             .done(function (response) {
