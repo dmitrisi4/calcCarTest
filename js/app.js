@@ -30807,22 +30807,10 @@
         },
         getExchangeRate: function getExchangeRate(callback) {
           var _this = this;
-					let today = new Date();
-					let todayStr = `${today.getDay()}.${today.getMonth() + 1}.${today.getFullYear()}`;
-          jquery__WEBPACK_IMPORTED_MODULE_0___default.a
-            .ajax({
-							method: 'get',
-							url: `https://cors-anywhere.herokuapp.com/https://api.privatbank.ua/p24api/exchange_rates?json&date=${todayStr}`,
-							crossDomain: true,
-							xhrFields: {
-								withCredentials: false
-							},
-						})
+          Promise.resolve({usd: 27.44, eur: 33.52})
             .done(function (response) {
-							let usdData = response.exchangeRate.find(data => data.currency == 'USD');
-							let eurData = response.exchangeRate.find(data => data.currency == 'EUR');
-              _this.exchangeRate.USD = usdData.purchaseRateNB;
-              _this.exchangeRate.EUR = eurData.purchaseRateNB;
+              _this.exchangeRate.USD = response.usd;
+              _this.exchangeRate.EUR = response.eur;
               callback();
             })
             .fail(function () {

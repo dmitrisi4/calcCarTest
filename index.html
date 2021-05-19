@@ -1,74 +1,87 @@
 <!doctype html>
 <html class="no-js" lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title></title>
-<link rel="stylesheet" href="css/app.css">
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" href="css/app.css">
 </head>
+
 <body>
-<div id="calculator">
-<h3>{ $t("calc.title") }</h3>
-<div class="basic calculation">
-<label v-if="selected === 'petrol' || selected === 'diesel' || selected === 'hybrid'">
-{ $t('calc.productionYear') }
-<input type="number" placeholder="1995 - 2016" v-model="years" min="1995" max="2016" onkeypress="if (!window.__cfRLUnblockHandlers) return false; return event.charCode != 45" value="1500" data-cf-modified-9f929538520cf785e0cb8748->
-<span class="error-msg error-years">{ $t('calc.errorYear') }</span>
-</label>
-<label>
-{ $t('calc.capacity') }
-<input type="number" placeholder="990 до 6000" min="990" max="6000" v-model="capacity" onkeypress="if (!window.__cfRLUnblockHandlers) return false; return event.charCode != 45" value="1500" data-cf-modified-9f929538520cf785e0cb8748->
-<span class="error-msg error-capacity">{ $t('calc.errorCapacity') }</span>
-</label>
-<label>
-{ $t("calc.engineType") }
-<select name id="engineType" v-model="selected">
-<option value="petrol">{ $t('calc.petrol') }</option>
-<option value="diesel" selected>{ $t('calc.diesel') }</option>
-<option value="hybrid">{ $t('calc.hybrid') }</option>
-</select>
-</label>
-<label>
-<input type="submit" id="submit" v-bind:value="$t('calc.calculate')" v-on:click="showMainResult">
-</label>
-</div>
-<div class="result-detail">
-<h4 id="result">{ $t('calc.customsClearanceCost') }</h4>
-<table>
-<tbody>
-<tr>
-<td>{ $t('calc.carAgeRate') }, { selectedCurrency }</td>
-<td>{ carAgeRate }</td>
-</tr>
-<tr>
-<td>{ $t('calc.engineCapacityRate') }, { selectedCurrency }</td>
-<td>{ engineCapacityRate }</td>
-</tr>
-<tr>
-<td>{ $t('calc.fuelTypeRate') }, { selectedCurrency }</td>
-<td>{ fuelTypeRate }</td>
-</tr>
-<tr>
-<td>{ $t('calc.VAT') }, { selectedCurrency }</td>
-<td>{ vatRate }</td>
-</tr>
-<tr>
-<td>{ $t('calc.pensionFee') }, { selectedCurrency }</td>
-<td> 250 </td>
-</tr>
-<tr>
-<td><h5>{ $t('calc.totalPrice') }</h5></td>
-<td><h4>{ totalPrice } { selectedCurrency }</h4></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<script src="js/vue.js" type="9f929538520cf785e0cb8748-text/javascript"></script>
-<script src="js/vue-i18n.js" type="9f929538520cf785e0cb8748-text/javascript"></script>
-<script src="js/v-tooltip.min.js" type="9f929538520cf785e0cb8748-text/javascript"></script>
-<script src="js/app.js" type="9f929538520cf785e0cb8748-text/javascript"></script>
-<script src="js/rocket-loader.min.js" data-cf-settings="9f929538520cf785e0cb8748-|49" defer></script><script defer src="js/beacon.min.js" data-cf-beacon="{"rayId":"651c85c61b232c01","token":"9db60479ab14458480be674357e32c95","version":"2021.5.1","si":10}"></script>
+	<div id="calculator">
+		<h3>{ $t("calc.title") }</h3>
+		<div class="basic calculation">
+			<label v-if="selected === 'petrol' || selected === 'diesel' || selected === 'hybrid'">
+				{ $t('calc.productionYear') }
+				<input type="number" placeholder="1995 - 2016" v-model="years" min="1995" max="2016"
+					onkeypress="if (!window.__cfRLUnblockHandlers) return false; return event.charCode != 45" value="1500"
+					data-cf-modified-9f929538520cf785e0cb8748->
+				<span class="error-msg error-years">{ $t('calc.errorYear') }</span>
+			</label>
+			<label>
+				{ $t('calc.capacity') }
+				<input type="number" placeholder="990 до 6000" min="990" max="6000" v-model="capacity"
+					onkeypress="if (!window.__cfRLUnblockHandlers) return false; return event.charCode != 45" value="1500"
+					data-cf-modified-9f929538520cf785e0cb8748->
+				<span class="error-msg error-capacity">{ $t('calc.errorCapacity') }</span>
+			</label>
+			<label>
+				{ $t("calc.engineType") }
+				<select name id="engineType" v-model="selected">
+					<option value="petrol">{ $t('calc.petrol') }</option>
+					<option value="diesel" selected>{ $t('calc.diesel') }</option>
+					<option value="hybrid">{ $t('calc.hybrid') }</option>
+				</select>
+			</label>
+			<label>
+				<input type="submit" id="submit" v-bind:value="$t('calc.calculate')" v-on:click="showMainResult">
+			</label>
+		</div>
+		<div class="result-detail">
+			<h4 id="result">{ $t('calc.customsClearanceCost') }</h4>
+			<table>
+				<tbody>
+					<tr>
+						<td>{ $t('calc.carAgeRate') }, { selectedCurrency }</td>
+						<td>{ carAgeRate }</td>
+					</tr>
+					<tr>
+						<td>{ $t('calc.engineCapacityRate') }, { selectedCurrency }</td>
+						<td>{ engineCapacityRate }</td>
+					</tr>
+					<tr>
+						<td>{ $t('calc.fuelTypeRate') }, { selectedCurrency }</td>
+						<td>{ fuelTypeRate }</td>
+					</tr>
+					<tr>
+						<td>{ $t('calc.VAT') }, { selectedCurrency }</td>
+						<td>{ vatRate }</td>
+					</tr>
+					<tr>
+						<td>{ $t('calc.pensionFee') }, { selectedCurrency }</td>
+						<td> 250 </td>
+					</tr>
+					<tr>
+						<td>
+							<h5>{ $t('calc.totalPrice') }</h5>
+						</td>
+						<td>
+							<h4>{ totalPrice } { selectedCurrency }</h4>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<script src="js/vue.js" type="9f929538520cf785e0cb8748-text/javascript"></script>
+	<script src="js/vue-i18n.js" type="9f929538520cf785e0cb8748-text/javascript"></script>
+	<script src="js/v-tooltip.min.js" type="9f929538520cf785e0cb8748-text/javascript"></script>
+	<script src="js/app.js" type="9f929538520cf785e0cb8748-text/javascript"></script>
+	<script src="js/rocket-loader.min.js" data-cf-settings="9f929538520cf785e0cb8748-|49" defer></script>
+	<script defer src="js/beacon.min.js" data-cf-beacon="{"
+		rayId":"651c85c61b232c01","token":"9db60479ab14458480be674357e32c95","version":"2021.5.1","si":10}"></script>
 </body>
+
 </html>
