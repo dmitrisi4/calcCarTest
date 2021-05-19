@@ -2616,15 +2616,13 @@
                   linkId = el.id
                     ? "".concat(el.id, "-label")
                     : "".concat(id, "-label");
-                $el
-                  .find("a:first")
-                  .attr({
-                    "aria-controls": id,
-                    role: "tab",
-                    id: linkId,
-                    "aria-expanded": false,
-                    "aria-selected": false,
-                  });
+                $el.find("a:first").attr({
+                  "aria-controls": id,
+                  role: "tab",
+                  id: linkId,
+                  "aria-expanded": false,
+                  "aria-selected": false,
+                });
                 $content.attr({
                   role: "tabpanel",
                   "aria-labelledby": linkId,
@@ -5771,14 +5769,12 @@
           {
             key: "_events",
             value: function _events() {
-              this.$element
-                .off(".zf.trigger .zf.offcanvas")
-                .on({
-                  "open.zf.trigger": this.open.bind(this),
-                  "close.zf.trigger": this.close.bind(this),
-                  "toggle.zf.trigger": this.toggle.bind(this),
-                  "keydown.zf.offcanvas": this._handleKeyboard.bind(this),
-                });
+              this.$element.off(".zf.trigger .zf.offcanvas").on({
+                "open.zf.trigger": this.open.bind(this),
+                "close.zf.trigger": this.close.bind(this),
+                "toggle.zf.trigger": this.toggle.bind(this),
+                "keydown.zf.offcanvas": this._handleKeyboard.bind(this),
+              });
               if (this.options.closeOnClick === true) {
                 var $target = this.options.contentOverlay
                   ? this.$overlay
@@ -5848,12 +5844,10 @@
               } else {
                 this.isRevealed = false;
                 this.$element.attr("aria-hidden", "true");
-                this.$element
-                  .off("open.zf.trigger toggle.zf.trigger")
-                  .on({
-                    "open.zf.trigger": this.open.bind(this),
-                    "toggle.zf.trigger": this.toggle.bind(this),
-                  });
+                this.$element.off("open.zf.trigger toggle.zf.trigger").on({
+                  "open.zf.trigger": this.open.bind(this),
+                  "toggle.zf.trigger": this.toggle.bind(this),
+                });
                 this.$element.addClass("is-closed");
               }
               this._addContentClasses(isRevealed);
@@ -6209,11 +6203,9 @@
             key: "_events",
             value: function _events() {
               var _this = this;
-              this.$element
-                .off(".resizeme.zf.trigger")
-                .on({
-                  "resizeme.zf.trigger": this._prepareForOrbit.bind(this),
-                });
+              this.$element.off(".resizeme.zf.trigger").on({
+                "resizeme.zf.trigger": this._prepareForOrbit.bind(this),
+              });
               if (this.$slides.length > 1) {
                 if (this.options.swipe) {
                   this.$slides
@@ -7546,28 +7538,24 @@
                 idx === 0 ? this.options.initialStart : this.options.initialEnd;
               var id =
                 this.inputs.eq(idx).attr("id") || GetYoDigits(6, "slider");
-              this.inputs
-                .eq(idx)
-                .attr({
-                  id: id,
-                  max: this.options.end,
-                  min: this.options.start,
-                  step: this.options.step,
-                });
+              this.inputs.eq(idx).attr({
+                id: id,
+                max: this.options.end,
+                min: this.options.start,
+                step: this.options.step,
+              });
               this.inputs.eq(idx).val(initVal);
-              this.handles
-                .eq(idx)
-                .attr({
-                  role: "slider",
-                  "aria-controls": id,
-                  "aria-valuemax": this.options.end,
-                  "aria-valuemin": this.options.start,
-                  "aria-valuenow": initVal,
-                  "aria-orientation": this.options.vertical
-                    ? "vertical"
-                    : "horizontal",
-                  tabindex: 0,
-                });
+              this.handles.eq(idx).attr({
+                role: "slider",
+                "aria-controls": id,
+                "aria-valuemax": this.options.end,
+                "aria-valuemin": this.options.start,
+                "aria-valuenow": initVal,
+                "aria-orientation": this.options.vertical
+                  ? "vertical"
+                  : "horizontal",
+                tabindex: 0,
+              });
             },
           },
           {
@@ -10276,15 +10264,13 @@
                   linkId = el.id
                     ? "".concat(el.id, "-label")
                     : "".concat(id, "-label");
-                $el
-                  .find("a:first")
-                  .attr({
-                    "aria-controls": id,
-                    role: "tab",
-                    id: linkId,
-                    "aria-expanded": false,
-                    "aria-selected": false,
-                  });
+                $el.find("a:first").attr({
+                  "aria-controls": id,
+                  role: "tab",
+                  id: linkId,
+                  "aria-expanded": false,
+                  "aria-selected": false,
+                });
                 $content.attr({
                   role: "tabpanel",
                   "aria-labelledby": linkId,
@@ -14864,14 +14850,12 @@
           {
             key: "_events",
             value: function _events() {
-              this.$element
-                .off(".zf.trigger .zf.offcanvas")
-                .on({
-                  "open.zf.trigger": this.open.bind(this),
-                  "close.zf.trigger": this.close.bind(this),
-                  "toggle.zf.trigger": this.toggle.bind(this),
-                  "keydown.zf.offcanvas": this._handleKeyboard.bind(this),
-                });
+              this.$element.off(".zf.trigger .zf.offcanvas").on({
+                "open.zf.trigger": this.open.bind(this),
+                "close.zf.trigger": this.close.bind(this),
+                "toggle.zf.trigger": this.toggle.bind(this),
+                "keydown.zf.offcanvas": this._handleKeyboard.bind(this),
+              });
               if (this.options.closeOnClick === true) {
                 var $target = this.options.contentOverlay
                   ? this.$overlay
@@ -14951,12 +14935,10 @@
               } else {
                 this.isRevealed = false;
                 this.$element.attr("aria-hidden", "true");
-                this.$element
-                  .off("open.zf.trigger toggle.zf.trigger")
-                  .on({
-                    "open.zf.trigger": this.open.bind(this),
-                    "toggle.zf.trigger": this.toggle.bind(this),
-                  });
+                this.$element.off("open.zf.trigger toggle.zf.trigger").on({
+                  "open.zf.trigger": this.open.bind(this),
+                  "toggle.zf.trigger": this.toggle.bind(this),
+                });
                 this.$element.addClass("is-closed");
               }
               this._addContentClasses(isRevealed);
@@ -15482,11 +15464,9 @@
             key: "_events",
             value: function _events() {
               var _this = this;
-              this.$element
-                .off(".resizeme.zf.trigger")
-                .on({
-                  "resizeme.zf.trigger": this._prepareForOrbit.bind(this),
-                });
+              this.$element.off(".resizeme.zf.trigger").on({
+                "resizeme.zf.trigger": this._prepareForOrbit.bind(this),
+              });
               if (this.$slides.length > 1) {
                 if (this.options.swipe) {
                   this.$slides
@@ -18206,28 +18186,24 @@
                     "GetYoDigits"
                   ]
                 )(6, "slider");
-              this.inputs
-                .eq(idx)
-                .attr({
-                  id: id,
-                  max: this.options.end,
-                  min: this.options.start,
-                  step: this.options.step,
-                });
+              this.inputs.eq(idx).attr({
+                id: id,
+                max: this.options.end,
+                min: this.options.start,
+                step: this.options.step,
+              });
               this.inputs.eq(idx).val(initVal);
-              this.handles
-                .eq(idx)
-                .attr({
-                  role: "slider",
-                  "aria-controls": id,
-                  "aria-valuemax": this.options.end,
-                  "aria-valuemin": this.options.start,
-                  "aria-valuenow": initVal,
-                  "aria-orientation": this.options.vertical
-                    ? "vertical"
-                    : "horizontal",
-                  tabindex: 0,
-                });
+              this.handles.eq(idx).attr({
+                role: "slider",
+                "aria-controls": id,
+                "aria-valuemax": this.options.end,
+                "aria-valuemin": this.options.start,
+                "aria-valuenow": initVal,
+                "aria-orientation": this.options.vertical
+                  ? "vertical"
+                  : "horizontal",
+                tabindex: 0,
+              });
             },
           },
           {
@@ -24141,11 +24117,9 @@
                         i > 1 && elementMatcher(matchers),
                         i > 1 &&
                           toSelector(
-                            tokens
-                              .slice(0, i - 1)
-                              .concat({
-                                value: tokens[i - 2].type === " " ? "*" : "",
-                              })
+                            tokens.slice(0, i - 1).concat({
+                              value: tokens[i - 2].type === " " ? "*" : "",
+                            })
                           ).replace(rtrim, "$1"),
                         matcher,
                         i < j && matcherFromTokens(tokens.slice(i, j)),
@@ -30764,7 +30738,74 @@
     var i18n = new VueI18n({ locale: "ua", messages: messages });
     new Vue({
       delimiters: ["{", "}"],
-      el: "#calculator",
+      template: `
+        <div id="calculator">
+          <h3>{ $t("calc.title") }</h3>
+          <div class="basic calculation">
+            <label v-if="selected === 'petrol' || selected === 'diesel' || selected === 'hybrid'">
+              { $t('calc.productionYear') }
+              <input type="number" placeholder="1995 - 2016" v-model="years" min="1995" max="2016"
+                onkeypress="if (!window.__cfRLUnblockHandlers) return false; return event.charCode != 45" value="1500"
+                data-cf-modified-9f929538520cf785e0cb8748->
+              <span class="error-msg error-years">{ $t('calc.errorYear') }</span>
+            </label>
+            <label>
+              { $t('calc.capacity') }
+              <input type="number" placeholder="990 до 6000" min="990" max="6000" v-model="capacity"
+                onkeypress="if (!window.__cfRLUnblockHandlers) return false; return event.charCode != 45" value="1500"
+                data-cf-modified-9f929538520cf785e0cb8748->
+              <span class="error-msg error-capacity">{ $t('calc.errorCapacity') }</span>
+            </label>
+            <label>
+              { $t("calc.engineType") }
+              <select name id="engineType" v-model="selected">
+                <option value="petrol">{ $t('calc.petrol') }</option>
+                <option value="diesel" selected>{ $t('calc.diesel') }</option>
+                <option value="hybrid">{ $t('calc.hybrid') }</option>
+              </select>
+            </label>
+            <label>
+              <input type="submit" id="submit" v-bind:value="$t('calc.calculate')" v-on:click="showMainResult">
+            </label>
+          </div>
+          <div class="result-detail">
+            <h4 id="result">{ $t('calc.customsClearanceCost') }</h4>
+            <table>
+              <tbody>
+                <tr>
+                  <td>{ $t('calc.carAgeRate') }, { selectedCurrency }</td>
+                  <td>{ carAgeRate }</td>
+                </tr>
+                <tr>
+                  <td>{ $t('calc.engineCapacityRate') }, { selectedCurrency }</td>
+                  <td>{ engineCapacityRate }</td>
+                </tr>
+                <tr>
+                  <td>{ $t('calc.fuelTypeRate') }, { selectedCurrency }</td>
+                  <td>{ fuelTypeRate }</td>
+                </tr>
+                <tr>
+                  <td>{ $t('calc.VAT') }, { selectedCurrency }</td>
+                  <td>{ vatRate }</td>
+                </tr>
+                <tr>
+                  <td>{ $t('calc.pensionFee') }, { selectedCurrency }</td>
+                  <td> 250 </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h5>{ $t('calc.totalPrice') }</h5>
+                  </td>
+                  <td>
+                    <h4>{ totalPrice } { selectedCurrency }</h4>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      `,
+      el: "#calc",
       i18n: i18n,
       data: {
         price: null,
@@ -30807,7 +30848,7 @@
         },
         getExchangeRate: function getExchangeRate(callback) {
           var _this = this;
-          Promise.resolve({usd: 27.44, eur: 33.52})
+          Promise.resolve({ usd: 27.44, eur: 33.52 })
             .then(function (response) {
               _this.exchangeRate.USD = response.usd;
               _this.exchangeRate.EUR = response.eur;
