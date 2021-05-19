@@ -30808,12 +30808,12 @@
         getExchangeRate: function getExchangeRate(callback) {
           var _this = this;
           Promise.resolve({usd: 27.44, eur: 33.52})
-            .done(function (response) {
+            .then(function (response) {
               _this.exchangeRate.USD = response.usd;
               _this.exchangeRate.EUR = response.eur;
               callback();
             })
-            .fail(function () {
+            .catch(function () {
               console.log("Error");
             });
         },
