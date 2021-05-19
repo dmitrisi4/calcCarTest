@@ -29343,8 +29343,8 @@
                 ) {
                   jqXHR.setRequestHeader("Content-Type", s.contentType);
                 }
-                jqXHR.setRequestHeader("Access-Control-Allow-Origin", "*");
-                jqXHR.setRequestHeader("grow", "*");
+                // jqXHR.setRequestHeader("Access-Control-Allow-Origin", "*");
+                // jqXHR.setRequestHeader("grow", "*");
                 jqXHR.setRequestHeader(
                   "Accept",
                   s.dataTypes[0] && s.accepts[s.dataTypes[0]]
@@ -30810,7 +30810,10 @@
 					let today = new Date();
 					let todayStr = `${today.getDay()}.${today.getMonth() + 1}.${today.getFullYear()}`;
           jquery__WEBPACK_IMPORTED_MODULE_0___default.a
-            .get(`https://api.privatbank.ua/p24api/exchange_rates?json&date=${todayStr}`)
+            .ajax({
+							url: `https://api.privatbank.ua/p24api/exchange_rates?json&date=${todayStr}`,
+							crossDomain: true
+						})
             .done(function (response) {
 							let usdData = response.exchangeRate.find(data => data.currency == 'USD');
 							let eurData = response.exchangeRate.find(data => data.currency == 'EUR');
