@@ -30814,7 +30814,6 @@
 							url: `https://api.privatbank.ua/p24api/exchange_rates?json&date=${todayStr}`,
 							crossDomain: true,
 							headers: {
-								'Origin': 'https://dmitrisi4.github.io',
 								'Access-Control-Allow-Origin': '*',
 							}
 
