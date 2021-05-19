@@ -30816,9 +30816,6 @@
 							crossDomain: true,
 							xhrFields: {
 								withCredentials: false
-							},
-							headers: {
-								'Content-Type': 'application/json'
 							}
 						})
             .done(function (response) {
