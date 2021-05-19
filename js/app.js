@@ -30807,8 +30807,10 @@
         },
         getExchangeRate: function getExchangeRate(callback) {
           var _this = this;
+					let today = new Date();
+					let todayStr = `${date.getDay()}.${date.getMonth() + 1}.${date.getFullYear()}`;
           jquery__WEBPACK_IMPORTED_MODULE_0___default.a
-            .get("https://old.bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json")
+            .get(`https://api.privatbank.ua/p24api/exchange_rates?json&date=${todayStr}`)
             .done(function (response) {
 							let usdData = response.find(data => data.cc == 'USD');
 							let eurData = response.find(data => data.cc == 'EUR');
