@@ -30746,33 +30746,30 @@
           <div class="basic calculation">
             <label v-if="selected === 'petrol' || selected === 'diesel' || selected === 'hybrid'">
               { $t('calc.productionYear') }
-              <input type="number" placeholder="1995 - 2016" v-model="years" min="1995" max="2016"
+              <input class="calculator__input" type="number" placeholder="1995 - 2016" v-model="years" min="1995" max="2016"
                 onkeypress="if (!window.__cfRLUnblockHandlers) return false; return event.charCode != 45" value="1500"
                 data-cf-modified-9f929538520cf785e0cb8748->
               <span class="error-msg error-years">{ $t('calc.errorYear') }</span>
             </label>
             <label>
               { $t('calc.capacity') }
-              <input type="number" placeholder="990 до 6000" min="990" max="6000" v-model="capacity"
+              <input  class="calculator__input" type="number" placeholder="990 до 6000" min="990" max="6000" v-model="capacity"
                 onkeypress="if (!window.__cfRLUnblockHandlers) return false; return event.charCode != 45" value="1500"
                 data-cf-modified-9f929538520cf785e0cb8748->
               <span class="error-msg error-capacity">{ $t('calc.errorCapacity') }</span>
             </label>
             <label>
               { $t("calc.engineType") }
-              <select name id="engineType" v-model="selected">
+              <select  class="calculator__input calculator__input_select" name id="engineType" v-model="selected">
                 <option value="petrol">{ $t('calc.petrol') }</option>
                 <option value="diesel" selected>{ $t('calc.diesel') }</option>
                 <option value="hybrid">{ $t('calc.hybrid') }</option>
               </select>
             </label>
-            <label>
-              // mark-1
-            </label>
           </div>
           <div class="result-detail">
-            <h4 id="result">{ $t('calc.customsClearanceCost') }</h4>
-            <table>
+            <h4 id="result" class="calculator__col-title">{ $t('calc.customsClearanceCost') }</h4>
+            <table class="calculator__table">
               <tbody>
                 <tr>
                   <td>{ $t('calc.carAgeRate') }, { selectedCurrency }</td>
@@ -30796,10 +30793,10 @@
                 </tr>
                 <tr>
                   <td>
-                    <h5>{ $t('calc.totalPrice') }</h5>
+                    <h5 class="calculator__price-title">{ $t('calc.totalPrice') }</h5>
                   </td>
                   <td>
-                    <h4>{ totalPrice } { selectedCurrency }</h4>
+                    <h4 class="calculator__price">{ totalPrice } { selectedCurrency }</h4>
                   </td>
                 </tr>
               </tbody>

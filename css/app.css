@@ -8141,23 +8141,7 @@ h6,
   text-rendering: optimizeLegibility;
   margin-bottom: 1rem;
 }
-select,
-[type="text"],
-[type="password"],
-[type="date"],
-[type="datetime"],
-[type="datetime-local"],
-[type="month"],
-[type="week"],
-[type="email"],
-[type="number"],
-[type="search"],
-[type="tel"],
-[type="time"],
-[type="url"],
-[type="color"],
-textarea,
-#submit {
+.calculator__input {
   font-size: 18px;
   height: 3.125rem;
   padding: 0.8rem 1.25rem 0.5rem;
@@ -8165,34 +8149,19 @@ textarea,
   margin-bottom: 0;
 }
 @media screen and (max-width: 640px) {
-  select,
-  [type="text"],
-  [type="password"],
-  [type="date"],
-  [type="datetime"],
-  [type="datetime-local"],
-  [type="month"],
-  [type="week"],
-  [type="email"],
-  [type="number"],
-  [type="search"],
-  [type="tel"],
-  [type="time"],
-  [type="url"],
-  [type="color"],
-  textarea,
-  #submit {
+  .calculator__input,
+	.calculator__input_select {
     padding: 0.8rem 1rem 0.5rem;
   }
 }
-select {
+.calculator__input_select {
   -webkit-appearance: none;
   background: url(../fonts/select-arrow.svg) no-repeat;
   background-position: calc(100% - 20px) 50%;
   position: relative;
 }
 @media screen and (max-width: 640px) {
-  select {
+  .calculator__input_select {
     background-position: calc(100% - 12px) 50%;
   }
 }
