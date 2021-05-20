@@ -19,6 +19,13 @@
 	grid-auto-flow: column;
 	margin-top: 20px;
 }
+@media screen and (max-width: 767px) {
+.calculator__row {
+	grid-auto-flow: row;
+	grid-row-gap: 20px;
+}
+
+}
 
 .submitButton {
 	background-color: green;
