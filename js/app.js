@@ -30740,7 +30740,9 @@
       delimiters: ["{", "}"],
       template: `
         <div id="calculator">
-          <h3>{ $t("calc.title") }</h3>
+          <div class="calculator">
+          <h3 class="calculator__title">{ $t("calc.title") }</h3>
+          <div class="calculator__row">
           <div class="basic calculation">
             <label v-if="selected === 'petrol' || selected === 'diesel' || selected === 'hybrid'">
               { $t('calc.productionYear') }
@@ -30765,7 +30767,7 @@
               </select>
             </label>
             <label>
-              <input type="submit" id="submit" v-bind:value="$t('calc.calculate')" v-on:click="showMainResult">
+              // mark-1
             </label>
           </div>
           <div class="result-detail">
@@ -30802,6 +30804,9 @@
                 </tr>
               </tbody>
             </table>
+          </div>
+          </div>
+          <input class="submitButton" type="submit" id="submit" v-bind:value="$t('calc.calculate')" v-on:click="showMainResult">
           </div>
         </div>
       `,

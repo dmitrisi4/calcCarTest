@@ -8239,7 +8239,7 @@ table tbody td {
 }
 table tbody td:last-child {
   text-align: right;
-  width: 100px;
+  width: 150px;
 }
 #calculator {
   display: -webkit-box;
@@ -8255,15 +8255,10 @@ table tbody td:last-child {
   -ms-flex-pack: distribute;
   justify-content: space-around;
   width: 100%;
-  max-width: 520px;
-  height: 870px;
   background: #fff;
   padding: 0 35px;
 }
-#calculator h3 {
-  font-size: 30px;
-  margin-bottom: 0;
-}
+
 #calculator .basic.calculation label:last-of-type {
   margin-bottom: 0;
 }
