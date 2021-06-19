@@ -30677,7 +30677,7 @@
           diesel: "Дизель",
           electro: "Електро",
           hybrid: "Гібрид",
-          capacity: "Об’м двигуна (см3)",
+          capacity: "Об’м  двигуна (см3)",
           productionYear: "Рік випуску",
           calculate: "РОЗРАХУВАТИ",
           customsClearanceCost: "Вартість розмитнення:",
@@ -30696,7 +30696,7 @@
           totalPriceAbout: "Автомобіль обійдеться:",
           error: "поле обов'язкове, значення не може бути менше нуля",
           errorYear: "Рік з 1995 по 2016!",
-          errorCapacity: "Від 990 до 6000!",
+          errorCapacity: "Від 0 до 6000!",
           rateError: "Неможливо отримати актуальний курс валют",
         },
       },
@@ -30730,7 +30730,7 @@
           totalPriceAbout: "Автомобиль обойдется:",
           error: "поле обязательное, значение не может быть меньше нуля",
           errorYear: "Год с 1995 по 2016!",
-          errorCapacity: "От 990 до 6000!",
+          errorCapacity: "От 0 до 6000!",
           rateError: "Невозможно получить актуальный курс валют",
         },
       },
@@ -30753,7 +30753,7 @@
             </label>
             <label>
               { $t('calc.capacity') }
-              <input  class="calculator__input" type="number" placeholder="990 до 6000" min="990" max="6000" v-model="capacity"
+              <input  class="calculator__input" type="number" placeholder="0 до 6000" min="0" max="6000" v-model="capacity"
                 onkeypress="if (!window.__cfRLUnblockHandlers) return false; return event.charCode != 45" value="1500"
                 data-cf-modified-9f929538520cf785e0cb8748->
               <span class="error-msg error-capacity">{ $t('calc.errorCapacity') }</span>
@@ -31037,7 +31037,7 @@
           return true;
         },
         checkValidInputCapacity: function checkValidInputCapacity(cap, sel) {
-          if (!cap || cap < 990 || cap > 6000) {
+          if (!cap || cap < 0 || cap > 6000) {
             document.querySelector(".error-" + sel).style.display = "block";
             return false;
           } else {
