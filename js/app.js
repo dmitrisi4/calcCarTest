@@ -30850,7 +30850,7 @@
         },
         getExchangeRate: function getExchangeRate(callback) {
           var _this = this;
-          Promise.resolve({ usd: 27.44, eur: 33.52 })
+          Promise.resolve({ usd: 27.44, eur: 31.2 })
             .then(function (response) {
               _this.exchangeRate.USD = response.usd;
               _this.exchangeRate.EUR = response.eur;
